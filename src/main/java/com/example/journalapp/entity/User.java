@@ -1,0 +1,28 @@
+package com.example.journalapp.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.io.Serializable;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@Entity
+@Table(name = "USERS_JOURNAL_TBL")
+public class User implements Serializable {
+    @Id
+    @GeneratedValue
+    private int id;
+    private String userName;
+    private String password;
+    private boolean active;
+    private String roles;
+}
