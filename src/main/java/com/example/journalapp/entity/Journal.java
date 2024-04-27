@@ -22,5 +22,8 @@ public class Journal implements Serializable {
     @GeneratedValue
     private int id;
     private String logTrail;
-    private int userId;
+
+    public Journal(String logTrail) {
+        this.logTrail = logTrail;
+    }
 }
